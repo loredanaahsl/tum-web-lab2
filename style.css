@@ -1393,7 +1393,10 @@ kbd{
 body.modal-open .mobile-cta{ display: none !important; }
 body.modal-open .mascot{ display: none !important; }
 
-.site-header .header-inner{
-  gap: 12px;
+.btn{
+  transition: transform .15s ease, box-shadow .15s ease;
 }
-.logo{ flex-shrink: 0; }
+
+.btn:hover{
+  transform: translateY(-1px);
+}
