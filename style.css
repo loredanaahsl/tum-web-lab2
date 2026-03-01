@@ -1394,3 +1394,8 @@ body.modal-open .mascot{ display: none !important; }
 .mascot-bubble{
   transition: opacity .25s ease, transform .25s ease;
 }
+
+img{
+  max-width: 100%;
+  display: block;
+}
