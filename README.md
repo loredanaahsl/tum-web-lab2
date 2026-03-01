@@ -100,10 +100,22 @@ Animated mascot with tooltip and delayed appearance.
 
 ## 📂 Project Structure
 
-tum-web-lab2/ │ ├── index.html ├── reset.css ├── style.css ├── images/ │
-├── favicon.png │ ├── mascot.gif │ ├── \[cookie images\] │ ├──
-screenshots/ │ ├── hero.png │ ├── weekly.png │ ├── modal.png │ ├──
-slideshow.png │ ├── mobile.png │ └── mascot.png │ └── README.md
+tum-web-lab2/ │ 
+├── index.html 
+├── reset.css 
+├── style.css 
+├── images/ │
+    ├── favicon.png │ 
+    ├── mascot.gif │ 
+    ├── \[cookie images\] │ 
+├──screenshots/ │ 
+    ├── hero.png │ 
+    ├── weekly.png │ 
+    ├── modal.png │ 
+    ├──slideshow.png │ 
+    ├── mobile.png │ 
+    └── mascot.png │ 
+└── README.md
 
 ------------------------------------------------------------------------
 
