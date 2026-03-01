@@ -30,3 +30,19 @@ To run locally:
 
 Live demo: (add your link here after deployment)
 
+
+
+\## Screenshots
+
+
+
+\### Desktop
+
+!\[Desktop](images/desktop.png)
+
+
+
+\### Mobile
+
+!\[Mobile](images/mobile.png)
+
