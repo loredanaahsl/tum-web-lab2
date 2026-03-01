@@ -1399,3 +1399,7 @@ img{
   max-width: 100%;
   display: block;
 }
+
+footer{
+  padding-top: 40px;
+}
