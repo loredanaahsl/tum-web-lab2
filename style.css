@@ -1390,3 +1390,7 @@ kbd{
 body.modal-open .mobile-cta{ display: none !important; }
 body.modal-open .mascot{ display: none !important; }
 
+
+.modal-content p{
+  max-width: 55ch;
+}
