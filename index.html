@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="images/favicon.png">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
@@ -48,6 +48,17 @@
 <main>
     <!-- HERO -->
     <section id="top" class="hero">
+        <section class="md:hidden mx-4 mt-4 rounded-2xl border border-pink-200 bg-white/80 backdrop-blur px-4 py-3 shadow">
+            <div class="flex items-center justify-between gap-3">
+                <div>
+                    <p class="text-sm font-extrabold text-slate-900">Quick order 🍪</p>
+                    <p class="text-xs font-semibold text-slate-600">Tap Weekly Drop to pick today’s flavors.</p>
+                </div>
+                <a href="#weekly" class="rounded-full bg-slate-900 px-4 py-2 text-xs font-extrabold text-white">
+                    Weekly
+                </a>
+            </div>
+        </section>
         <div class="mobile-only-note">
             Tip: Tap a cookie to see details 🍪
         </div>
