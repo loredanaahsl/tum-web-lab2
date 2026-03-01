@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biskuit — Cozy Cookies</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- keep the teacher's reset file name/path -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<!-- HEADER / NAV -->
+<header class="site-header" id="home">
+    <div class="container header-inner">
+        <a class="logo" href="#home" aria-label="Biskuit home">
+            <img src="images/logo.png" alt="" class="logo-img">
+            <span class="logo-text">biskuit</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="#weekly">Weekly Drop</a>
+            <a href="#classic">Always Available</a>
+            <a href="#packages">Packages</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="btn btn-primary" href="#packages">Order Now</a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section id="top" class="hero">
+        <div class="mobile-only-note">
+            Tip: Tap a cookie to see details 🍪
+        </div>
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <span class="pill">Fresh this week • limited batches</span>
+                <h1>Cozy cookies, big flavors.</h1>
+                <p class="lead">
+                    Inspired by weekly drops — pastel, soft, and dangerously delicious.
+                    Order for pickup or delivery in Chișinău.
+                </p>
+
+                <div class="hero-cta">
+                    <a class="btn btn-primary" href="#weekly">See Weekly Drop</a>
+                    <a class="btn btn-outline" href="#weekly">Explore Menu</a>
+                </div>
+
+                <div class="hero-stats" role="list">
+                    <div class="stat" role="listitem">
+                        <div class="stat-num">5</div>
+                        <div class="stat-label">weekly flavors</div>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <div class="stat-num">24h</div>
+                        <div class="stat-label">freshness window</div>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <div class="stat-num">★ 4.9</div>
+                        <div class="stat-label">happy customers</div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="hero-feature" aria-label="Featured cookie">
+                <div class="feature-card weekly-preview" aria-label="This week preview">
+                    <div class="weekly-media" aria-hidden="true">
+                        <img class="weekly-img" src="" alt="">
+                    </div>
+                    <div class="weekly-preview-head">
+                        <span class="badge weekly-badge">This Week Only</span>
+
+                        <div class="weekly-nav" aria-label="Preview navigation">
+                            <button class="weekly-btn weekly-prev" type="button" aria-label="Previous cookie">‹</button>
+                            <button class="weekly-btn weekly-next" type="button" aria-label="Next cookie">›</button>
+                        </div>
+                    </div>
+
+                    <h2 class="feature-title weekly-title">Loading...</h2>
+                    <p class="feature-desc weekly-desc"></p>
+
+                    <div class="weekly-dots" aria-label="Choose cookie"></div>
+
+                    <div class="feature-actions">
+                        <button class="btn btn-soft js-open-feature" type="button">Learn More</button>
+                        <a class="btn btn-primary js-order-feature" href="#weekly">Order Now</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- WEEKLY DROP (COOKIE SHOWCASE) -->
+    <section class="section" id="weekly">
+        <div class="container">
+            <div class="section-head">
+                <h2>Weekly Drop</h2>
+                <p class="muted">Five new or returning flavors drop every Monday. Try them before they’re gone!</p>
+            </div>
+
+            <div class="cookie-showcase">
+                <!-- 1 -->
+                <article
+                        class="cookie-item js-cookie"
+                        data-theme="smores"
+
+
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Campfire S’mores Cookie"
+                        data-name="Campfire S’mores Cookie"
+                        data-tag="This Week Only"
+                        data-desc="A golden graham-style cookie topped with melted milk chocolate, toasted marshmallow, and crunchy chocolate chunks."
+                        data-price="79 MDL"
+                        
+                        data-img="images/campfire-smores.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/campfire-smores.png" alt="Campfire S’mores Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">This Week Only</span>
+                        <h3>Campfire S’mores</h3>
+                        <p>
+                            Golden graham cookie, milk chocolate melt, toasted marshmallow, and crunchy chunks.
+                        </p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Celebration Cake Cookie"
+                        data-name="Celebration Cake Cookie"
+                        data-tag="This Week Only"
+                        data-desc="A soft cake-batter cookie topped with vanilla frosting and loaded with colorful candy sprinkles."
+                        data-price="75 MDL"
+                        data-theme="cake"
+                        data-img="images/celebration-cake.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/celebration-cake.png" alt="Celebration Cake Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">This Week Only</span>
+                        <h3>Celebration Cake</h3>
+                        <p>Soft cake-batter cookie, vanilla frosting, and candy sprinkles.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Peanut Butter Cup Cookie"
+                        data-name="Peanut Butter Cup Cookie"
+                        data-tag="Limited"
+                        data-desc="A rich peanut butter cookie filled with a classic peanut butter cup and finished with a smooth peanut butter drizzle."
+                        data-price="82 MDL"
+                        data-theme="pb"
+                        data-img="images/peanut-butter-cup.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/peanut-butter-cup.png" alt="Peanut Butter Cup Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">Limited</span>
+                        <h3>Peanut Butter Cup</h3>
+                        <p>Rich PB base, filled PB cup, finished with silky PB drizzle.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        data-theme="caramel"
+                        role="button"
+                        aria-label="Open Caramel Crunch Cookie"
+                        data-name="Caramel Crunch Cookie"
+                        data-tag="This Week Only"
+                        data-desc="A buttery cookie topped with warm caramel sauce and chunks of milk chocolate for the perfect sweet bite."
+                        data-price="78 MDL"
+                        data-img="images/caramel-crunch.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/caramel-crunch.png" alt="Caramel Crunch Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">This Week Only</span>
+                        <h3>Caramel Crunch</h3>
+                        <p>Buttery base, warm caramel, and milk chocolate chunks.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        data-theme="lemon"
+                        role="button"
+                        aria-label="Open Strawberry Cheesecake Cookie"
+                        data-name="Strawberry Cheesecake Cookie"
+                        data-tag="Featured"
+                        data-desc="A vanilla cookie layered with strawberry compote, creamy cheesecake filling, and white chocolate pieces."
+                        data-price="85 MDL"
+                        data-img="images/strawberry-cheesecake.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/strawberry-cheesecake.png" alt="Strawberry Cheesecake Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">Featured</span>
+                        <h3>Strawberry Cheesecake</h3>
+                        <p>Vanilla base, strawberry compote, cheesecake cream, white chocolate.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        data-theme="choco"
+                        role="button"
+                        aria-label="Open Triple Chocolate Fudge Cookie"
+                        data-name="Triple Chocolate Fudge Cookie"
+                        data-tag="This Week Only"
+                        data-desc="A deep cocoa cookie packed with dark, milk, and semi-sweet chocolate chunks, finished with melted chocolate on top."
+                        data-price="84 MDL"
+
+                        data-img="images/triple-chocolate-fudge.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/triple-chocolate-fudge.png" alt="Triple Chocolate Fudge Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">This Week Only</span>
+                        <h3>Triple Chocolate Fudge</h3>
+                        <p>Deep cocoa cookie with 3 chocolates + melted top layer.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        data-theme="caramel"
+                        role="button"
+                        aria-label="Open Salted Caramel Cheesecake Cookie"
+                        data-name="Salted Caramel Cheesecake Cookie"
+                        data-tag="Limited"
+                        data-desc="A soft cookie topped with vanilla cheesecake cream, salted caramel drizzle, and chocolate crunch pieces."
+                        data-price="88 MDL"
+                        data-img="images/salted-caramel-cheesecake.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/salted-caramel-cheesecake.png" alt="Salted Caramel Cheesecake Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">Limited</span>
+                        <h3>Salted Caramel Cheesecake</h3>
+                        <p>Cheesecake cream, salted caramel drizzle, chocolate crunch.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8 -->
+                <article
+                        class="cookie-item js-cookie"
+                        tabindex="0"
+                        data-theme="pink"
+                        role="button"
+                        aria-label="Open Red Velvet Oreo Cookie"
+                        data-name="Red Velvet Oreo Cookie"
+                        data-tag="This Week Only"
+                        data-desc="A red velvet cookie topped with smooth cream cheese frosting and crushed Oreo cookies for a rich, cookies-and-cream finish."
+                        data-price="86 MDL"
+                        data-theme="pink"
+                        data-img="images/red-velvet-oreo.png"
+                >
+                    <div class="cookie-media">
+                        <img src="images/red-velvet-oreo.png" alt="Red Velvet Oreo Cookie" />
+                    </div>
+                    <div class="cookie-content">
+                        <span class="cookie-tag">This Week Only</span>
+                        <h3>Red Velvet Oreo</h3>
+                        <p>Cream cheese frosting + crushed Oreo for that cookies-and-cream finish.</p>
+                        <div class="cookie-actions">
+                            <button class="btn btn-learn" type="button">Learn More</button>
+                            <button class="btn btn-dark" type="button">Order Now</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALWAYS AVAILABLE (CLASSIC FLAVORS) -->
+    <section class="section" id="classic">
+        <div class="container">
+            <div class="section-head">
+                <span class="pill pill-soft">Always Available</span>
+                <h2>Classic Flavors</h2>
+                <p class="muted">Clasicele care sunt aici mereu — perfecte pentru “safe choice”.</p>
+            </div>
+
+            <div class="classic-grid">
+                <!-- 1 -->
+                <article
+                        class="classic-card js-cookie"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Semi-Sweet Chocolate Chunk Cookie"
+                        data-name="Semi-Sweet Chocolate Chunk Cookie"
+                        data-tag="Always Available"
+                        data-desc="Soft vanilla cookie loaded with semi-sweet chunks — the classic that never misses."
+                        data-price="72 MDL"
+                        data-theme="choco"
+                        data-img="images/classic-chocolate-chunk.png"
+                >
+                    <div class="classic-media">
+                        <img src="images/classic-chocolate-chunk.png" alt="Semi-Sweet Chocolate Chunk Cookie" />
+                    </div>
+                    <div class="classic-body">
+                        <h3>Semi-Sweet Chocolate Chunk</h3>
+                        <p class="muted">Vanilla base + big chocolate chunks.</p>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article
+                        class="classic-card js-cookie"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Classic Sugar Cookie"
+                        data-name="Classic Sugar Cookie"
+                        data-tag="Always Available"
+                        data-desc="Buttery sugar cookie with a light vanilla glaze — simple, cute, addictive."
+                        data-price="68 MDL"
+                        data-theme="cake"
+                        data-img="images/classic-sugar.png"
+                >
+                    <div class="classic-media">
+                        <img src="images/classic-sugar.png" alt="Classic Sugar Cookie" />
+                    </div>
+                    <div class="classic-body">
+                        <h3>Classic Sugar</h3>
+                        <p class="muted">Buttery, soft, vanilla glaze.</p>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article
+                        class="classic-card js-cookie"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Double Chocolate Cookie"
+                        data-name="Double Chocolate Cookie"
+                        data-tag="Always Available"
+                        data-desc="Cocoa cookie with extra chocolate chunks — for the real chocoholics."
+                        data-price="74 MDL"
+                        data-theme="choco"
+                        data-img="images/classic-double-choco.png"
+                >
+                    <div class="classic-media">
+                        <img src="images/classic-double-choco.png" alt="Double Chocolate Cookie" />
+                    </div>
+                    <div class="classic-body">
+                        <h3>Double Chocolate</h3>
+                        <p class="muted">Cocoa base + extra chunks.</p>
+                    </div>
+                </article>
+
+                <!-- 4 -->
+                <article
+                        class="classic-card js-cookie"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Open Peanut Butter Classic Cookie"
+                        data-name="Peanut Butter Classic Cookie"
+                        data-tag="Always Available"
+                        data-desc="Soft peanut butter cookie with that iconic criss-cross top."
+                        data-price="70 MDL"
+                        data-theme="pb"
+                        data-img="images/classic-peanut-butter.png"
+                >
+                    <div class="classic-media">
+                        <img src="images/classic-peanut-butter.png" alt="Peanut Butter Classic Cookie" />
+                    </div>
+                    <div class="classic-body">
+                        <h3>Peanut Butter Classic</h3>
+                        <p class="muted">Soft PB, criss-cross top.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES / PRICING -->
+    <section class="section alt" id="packages">
+        <div class="container">
+            <div class="section-head">
+                <h2>Pick Your Package</h2>
+                <p class="muted">Mix & match your weekly favorites.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Single</h3>
+                    <p class="price">79 MDL</p>
+                    <p class="muted">Pick one cookie</p>
+                    <a class="btn btn-primary" href="#contact">Order</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <span class="badge">Most Popular</span>
+                    <h3>Half Dozen</h3>
+                    <p class="price">420 MDL</p>
+                    <p class="muted">6 cookies (mix & match)</p>
+                    <a class="btn btn-primary" href="#contact">Order</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Dozen</h3>
+                    <p class="price">780 MDL</p>
+                    <p class="muted">12 cookies (mix & match)</p>
+                    <a class="btn btn-primary" href="#contact">Order</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Party Box</h3>
+                    <p class="price">1450 MDL</p>
+                    <p class="muted">24 cookies for events</p>
+                    <a class="btn btn-primary" href="#contact">Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div>
+                <h2>About Biskuit</h2>
+                <p class="muted">
+                    Small-batch cookies baked for maximum cozy. We do weekly drops, pastel vibes, and flavors that feel like a hug.
+                </p>
+                <div class="about-cards">
+                    <div class="mini-card">
+                        <h3>Small batches</h3>
+                        <p class="muted">Freshness first — baked in limited runs.</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3>Weekly rotation</h3>
+                        <p class="muted">New lineup every week, classics return often.</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3>Pickup & delivery</h3>
+                        <p class="muted">Order online. Quick pickup or delivery in the city.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-panel">
+                <h3>How ordering works</h3>
+                <ol class="steps">
+                    <li><span class="step-dot"></span> Choose your weekly flavors</li>
+                    <li><span class="step-dot"></span> Pick a package</li>
+                    <li><span class="step-dot"></span> Leave a note (allergies / extras)</li>
+                    <li><span class="step-dot"></span> Pickup or delivery</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section alt" id="contact">
+        <div class="container contact-grid">
+            <div>
+                <h2>Contact & Order</h2>
+                <p class="muted">
+                    Want a custom box or event order? Send a message and we’ll reply fast.
+                </p>
+
+                <div class="contact-lines">
+                    <p><strong>Email:</strong> <a href="mailto:loredana.condrea12@gmail.com">loredana.condrea12@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+37360250970">+373 60 250970</a></p>
+                    <p><strong>City:</strong> Chișinău, Moldova</p>
+                </div>
+            </div>
+
+            <form
+                    class="contact-form"
+                    action="#"
+                    onsubmit="alert('Demo: form not submitted.'); return false;"
+            >
+                <label>
+                    Your name
+                    <input type="text" name="name" required />
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" required />
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+
+                <button class="btn btn-primary" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> Biskuit — Made cozy.</p>
+        <nav class="footer-nav">
+            <a href="#top" class="back-to-top">Back to top</a>
+        </nav>
+    </div>
+</footer>
+
+<!-- MODAL (Crumbl-style fade preview) -->
+<div class="modal" id="cookieModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Close" data-close="true">✕</button>
+
+        <div class="modal-inner">
+            <div class="modal-media">
+                <img id="modalImg" src="" alt="" />
+            </div>
+
+            <div class="modal-content">
+                <span class="badge" id="modalTag">This Week Only</span>
+                <h3 id="modalTitle">Cookie title</h3>
+                <p class="muted" id="modalDesc">Cookie description</p>
+
+                <div class="modal-row">
+                    <div class="price-chip" id="modalPrice">—</div>
+                    <button class="btn btn-primary" type="button" onclick="alert('Demo: order not submitted.')">
+                        Order Now
+                    </button>
+                </div>
+
+                <p class="tiny muted">
+                    Tip: click outside or press <kbd>Esc</kbd> to close.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".site-nav");
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    // Modal logic
+    const modal = document.getElementById("cookieModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalTag = document.getElementById("modalTag");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalImg = document.getElementById("modalImg");
+    const modalPrice = document.getElementById("modalPrice");
+
+    const openModal = (data) => {
+      document.body.classList.add("no-scroll", "modal-open");
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+
+      modal.dataset.theme = data.theme || "default";
+      modalTitle.textContent = data.name || "Cookie";
+      modalTag.textContent = data.tag || "This Week Only";
+      modalDesc.textContent = data.desc || "";
+      modalPrice.textContent = data.price ? `from ${data.price}` : "—";
+
+      modalImg.src = data.img || "";
+      modalImg.alt = data.name || "Cookie image";
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll", "modal-open");
+    };
+
+    // Cookie click
+    document.querySelectorAll(".js-cookie").forEach((card) => {
+      const handler = () => {
+        openModal({
+          name: card.dataset.name,
+          tag: card.dataset.tag,
+          desc: card.dataset.desc,
+          price: card.dataset.price,
+          theme: card.dataset.theme,
+          img: card.dataset.img,
+        });
+      };
+
+      card.addEventListener("click", handler);
+      card.querySelectorAll("button").forEach((btn) => btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        handler();
+      }));
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handler();
+        }
+      });
+    });
+
+    // Hero feature button opens Strawberry Cheesecake modal
+    document.querySelector(".js-open-feature")?.addEventListener("click", () => {
+      openModal({
+        name: "Strawberry Cheesecake Cookie",
+        tag: "This Week Only",
+        desc: "A vanilla cookie layered with strawberry compote, creamy cheesecake filling, and white chocolate pieces.",
+        price: "85 MDL",
+        theme: "strawberry",
+        img: "images/strawberry-cheesecake.png",
+      });
+    });
+
+    // Close modal
+    modal.addEventListener("click", (e) => {
+      if (e.target?.dataset?.close === "true") closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+</script>
+<script>
+    (function(){
+      const weeklySection = document.querySelector('#weekly');
+      const cookies = weeklySection ? Array.from(weeklySection.querySelectorAll('.js-cookie')) : [];
+      if (!cookies.length) return;
+
+      const card = document.querySelector('.weekly-preview');
+      if (!card) return;
+
+      const badgeEl = card.querySelector('.weekly-badge');
+      const titleEl = card.querySelector('.weekly-title');
+      const descEl  = card.querySelector('.weekly-desc');
+      const dotsEl  = card.querySelector('.weekly-dots');
+
+      const btnPrev = card.querySelector('.weekly-prev');
+      const btnNext = card.querySelector('.weekly-next');
+      const btnLearn = card.querySelector('.js-open-feature');
+      const btnOrder = card.querySelector('.js-order-feature');
+
+      // Build slides from existing data-* on your weekly cookies
+     const slides = cookies.map((el) => ({
+  el,
+  theme: el.dataset.theme || 'pink',
+  tag: el.dataset.tag || 'This Week Only',
+  name: el.dataset.name || el.querySelector('h3')?.textContent?.trim() || 'Cookie',
+  desc: el.dataset.desc || el.querySelector('p')?.textContent?.trim() || '',
+  img: el.dataset.img || '' // ✅ add this
+}));
+
+      // Dots
+      dotsEl.innerHTML = '';
+      const dots = slides.map((_, i) => {
+        const d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'weekly-dot';
+        d.setAttribute('aria-label', `Show cookie ${i+1}`);
+        d.addEventListener('click', () => setIndex(i, true));
+        dotsEl.appendChild(d);
+        return d;
+      });
+
+      let idx = 0;
+      let timer = null;
+
+     function render(){
+  const s = slides[idx];
+
+  if (badgeEl) badgeEl.textContent = s.tag;
+  if (titleEl) titleEl.textContent = s.name;
+
+  // we’re hiding desc anyway, but keep it safe
+  if (descEl) descEl.textContent = s.desc || "";
+
+  // ✅ set image
+  const imgEl = card.querySelector('.weekly-img');
+  if (imgEl){
+    imgEl.src = s.img;
+    imgEl.alt = s.name;
+  }
+
+  card.setAttribute('data-theme', s.theme);
+  dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+}
+      function setIndex(next, userAction){
+        idx = (next + slides.length) % slides.length;
+        render();
+        if (userAction) restartAuto();
+      }
+
+      function next(){ setIndex(idx + 1, true); }
+      function prev(){ setIndex(idx - 1, true); }
+
+      btnNext.addEventListener('click', next);
+      btnPrev.addEventListener('click', prev);
+
+      // Learn More: open the real cookie modal by triggering click on the weekly cookie
+      btnLearn.addEventListener('click', () => {
+        slides[idx].el.click();
+      });
+
+      // Order Now: scroll to weekly & optionally open modal
+      btnOrder.addEventListener('click', (e) => {
+        // keep your anchor behavior (#weekly) but also: (optional) open modal immediately
+        // e.preventDefault(); document.querySelector('#weekly')?.scrollIntoView({behavior:'smooth'});
+        // setTimeout(() => slides[idx].el.click(), 450);
+      });
+
+
+
+     function startAuto(){
+  if (timer) return;   // prevents multiple intervals
+  timer = setInterval(() => {
+    setIndex(idx + 1, false);
+  }, 6000);
+}
+function stopAuto(){
+  if (timer){
+    clearInterval(timer);
+    timer = null;
+  }
+}
+      function restartAuto(){
+        stopAuto();
+        startAuto();
+      }
+
+      // Pause on hover (nice UX)
+      card.addEventListener('mouseenter', stopAuto);
+      card.addEventListener('mouseleave', startAuto);
+
+      // Keyboard: left/right on the card
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
+      });
+
+      render();
+      startAuto();
+    })();
+</script>
+<div class="mascot" id="mascot" aria-label="Biskuit mascot" role="complementary">
+    <button class="mascot-btn" type="button" aria-label="Biskuit helper">
+        <img class="mascot-gif" src="images/mascot.gif" alt="Biskuit mascot">
+
+    </button>
+
+    <div class="mascot-bubble" role="tooltip">
+        <strong>Hey! I’m Bisc!🍪</strong><br>
+        Wanna see this week’s drop? <br>
+        <a class="mascot-link" href="#weekly">Go to Weekly</a>
+    </div>
+</div>
+<script>
+    // show mascot after delay
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('mascot')?.classList.add('is-visible');
+      }, 1400); // 1.4s delay
+    });
+</script>
+<script>
+    const mascot = document.getElementById('mascot');
+    const bubble = mascot?.querySelector('.mascot-bubble');
+    const btn = mascot?.querySelector('.mascot-btn');
+
+    btn?.addEventListener('click', (e) => {
+      // toggle bubble on tap/click
+      mascot.classList.toggle('is-open');
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mascot) return;
+      if (!mascot.contains(e.target)) mascot.classList.remove('is-open');
+    });
+</script>
+<script>
+    const mascotGif = document.querySelector('.mascot-gif');
+
+    if (mascotGif) {
+      mascotGif.addEventListener('click', () => {
+        const src = mascotGif.src;
+        mascotGif.src = "";
+        mascotGif.offsetHeight; // force reflow
+        mascotGif.src = src;
+      });
+    }
+</script>
+<div class="mobile-cta" aria-label="Quick actions">
+    <a class="mobile-cta-btn primary" href="#weekly">Weekly Drop</a>
+    <a class="mobile-cta-btn" href="#packages">Order</a>
+
+</div>
+</body>
+</html>
