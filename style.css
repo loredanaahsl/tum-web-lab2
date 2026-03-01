@@ -19,10 +19,7 @@
 }
 
 *{ box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-.back-to-top{ position: relative; z-index: 30; }
-body.modal-open .mobile-cta{ display:none !important; }
-body.modal-open .mascot{ display:none !important; }
+
 html{ scroll-behavior:smooth; }
 body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -1393,10 +1390,3 @@ kbd{
 body.modal-open .mobile-cta{ display: none !important; }
 body.modal-open .mascot{ display: none !important; }
 
-.btn{
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-
-.btn:hover{
-  transform: translateY(-1px);
-}
