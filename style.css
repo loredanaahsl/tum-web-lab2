@@ -1393,11 +1393,7 @@ kbd{
 body.modal-open .mobile-cta{ display: none !important; }
 body.modal-open .mascot{ display: none !important; }
 
-:focus-visible{
-  outline: 3px solid rgba(243,139,179,0.6);
-  outline-offset: 3px;
+.site-header .header-inner{
+  gap: 12px;
 }
-@media (prefers-reduced-motion: reduce){
-  *{ animation: none !important; transition: none !important; }
-  html{ scroll-behavior: auto !important; }
-}
+.logo{ flex-shrink: 0; }
