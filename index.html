@@ -48,17 +48,7 @@
 <main>
     <!-- HERO -->
     <section id="top" class="hero">
-        <section class="md:hidden mx-4 mt-4 rounded-2xl border border-pink-200 bg-white/80 backdrop-blur px-4 py-3 shadow">
-            <div class="flex items-center justify-between gap-3">
-                <div>
-                    <p class="text-sm font-extrabold text-slate-900">Quick order 🍪</p>
-                    <p class="text-xs font-semibold text-slate-600">Tap Weekly Drop to pick today’s flavors.</p>
-                </div>
-                <a href="#weekly" class="rounded-full bg-slate-900 px-4 py-2 text-xs font-extrabold text-white">
-                    Weekly
-                </a>
-            </div>
-        </section>
+
         <div class="mobile-only-note">
             Tip: Tap a cookie to see details 🍪
         </div>
@@ -584,7 +574,7 @@
     </div>
 </footer>
 
-<!-- MODAL (Crumbl-style fade preview) -->
+<!-- MODAL -->
 <div class="modal" id="cookieModal" aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
 
@@ -731,7 +721,7 @@
   tag: el.dataset.tag || 'This Week Only',
   name: el.dataset.name || el.querySelector('h3')?.textContent?.trim() || 'Cookie',
   desc: el.dataset.desc || el.querySelector('p')?.textContent?.trim() || '',
-  img: el.dataset.img || '' // ✅ add this
+  img: el.dataset.img || '' //
 }));
 
       // Dots

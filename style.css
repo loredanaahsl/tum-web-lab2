@@ -283,7 +283,7 @@ h1, h2, h3, .feature-title{
 }
 .muted{ color: var(--muted); line-height: 1.75; font-weight: 500; }
 
-/* COOKIE SHOWCASE (alternate left/right like Crumbl) */
+/* COOKIE SHOWCASE  */
 .cookie-showcase{
   display:flex;
   flex-direction: column;
@@ -291,7 +291,7 @@ h1, h2, h3, .feature-title{
   margin-top: 22px;
 }
 
-/* COOKIE ROW (Crumbl-like: no card, hover highlight) */
+/* COOKIE ROW  */
 .cookie-item{
   position: relative;
   overflow: visible; /* IMPORTANT */
@@ -1026,7 +1026,7 @@ kbd{
   position: fixed;
   right: 18px;
   bottom: 18px;
-  z-index: 10;
+  z-index: 10050;
   opacity: 0;
   transform: translateY(14px) scale(0.96);
   transition: opacity .35s ease, transform .35s ease;
@@ -1091,6 +1091,7 @@ kbd{
   pointer-events: auto;
   font-size: 13px;
   line-height: 1.35;
+  z-index: 10060;
 }
 
 .mascot-bubble::after{
@@ -1138,23 +1139,6 @@ kbd{
 @keyframes mascotTilt{
   0%,100% { transform: rotate(0deg); }
   50% { transform: rotate(-6deg); }
-}
-
-/* Mobile placement tweak */
-@media (max-width: 520px){
-  .mascot{
-    right: 12px;
-    bottom: 12px;
-  }
-  .mascot-bubble{
-    right: 78px;
-    width: 200px;
-  }
-}
-
-.mascot.is-open .mascot-bubble{
-  opacity: 1;
-  transform: translateX(0);
 }
 
 
@@ -1359,7 +1343,7 @@ kbd{
   /* imaginea nu mai ia tot ecranul */
   .modal-media{
     flex: 0 0 auto;
-    max-height: 320px;               /* ✅ limitează imaginea */
+    max-height: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1387,14 +1371,6 @@ kbd{
   }
 }
 
-body.modal-open .mobile-cta{ display: none !important; }
-body.modal-open .mascot{ display: none !important; }
-
-
-.mascot-bubble{
-  transition: opacity .25s ease, transform .25s ease;
-}
-
 img{
   max-width: 100%;
   display: block;
@@ -1403,3 +1379,44 @@ img{
 footer{
   padding-top: 40px;
 }
+
+ body.modal-open .mobile-cta{ display: none !important; }
+ body.modal-open .mascot{ display: none !important; }
+
+
+@media (max-width: 520px){
+  /* Mascot în dreapta (deasupra barei) */
+  .mascot{
+    position: fixed !important;
+    right: 14px !important;
+    left: auto !important;
+    bottom: 150px !important;     /* ajustezi dacă vrei mai sus/jos */
+    transform: none !important;
+    z-index: 20000 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Bubble lângă mascot (în stânga ei) */
+  .mascot-bubble{
+    position: fixed !important;
+    right: 86px !important;       /* distanța față de mascot */
+    left: auto !important;
+    bottom: 195px !important;     /* aliniere cu bubble */
+    transform: none !important;
+    width: min(260px, calc(100vw - 120px)) !important;
+    z-index: 20001 !important;
+    pointer-events: auto !important;
+  }
+
+  /* bara rămâne sub mascot */
+  .mobile-cta{
+    z-index: 9998 !important;
+  }
+}
+ html, body{
+   transform: none !important;
+ }
+
+ .mascot{
+   isolation: isolate;
+ }
