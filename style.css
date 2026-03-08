@@ -1403,3 +1403,33 @@ img{
 footer{
   padding-top: 40px;
 }
+
+@media (max-width: 520px){
+  /* Mascot în dreapta (deasupra barei) */
+  .mascot{
+    position: fixed !important;
+    right: 14px !important;
+    left: auto !important;
+    bottom: 150px !important;     /* ajustezi dacă vrei mai sus/jos */
+    transform: none !important;
+    z-index: 20000 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Bubble lângă mascot (în stânga ei) */
+  .mascot-bubble{
+    position: fixed !important;
+    right: 86px !important;       /* distanța față de mascot */
+    left: auto !important;
+    bottom: 195px !important;     /* aliniere cu bubble */
+    transform: none !important;
+    width: min(260px, calc(100vw - 120px)) !important;
+    z-index: 20001 !important;
+    pointer-events: auto !important;
+  }
+
+  /* bara rămâne sub mascot */
+  .mobile-cta{
+    z-index: 9998 !important;
+  }
+}
