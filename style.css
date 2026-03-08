@@ -1394,3 +1394,140 @@ body.modal-open .mascot{ display: none !important; }
 .mascot-bubble{
   transition: opacity .25s ease, transform .25s ease;
 }
+
+
+/* Mascot */
+.mascot{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+  transition: opacity .35s ease, transform .35s ease;
+  pointer-events: none; /* until shown */
+}
+
+.mascot.is-visible{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.mascot-btn{
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 1px solid rgba(17,20,40,0.12);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  animation: mascotFloat 2.6s ease-in-out infinite;
+}
+
+.mascot-gif{
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  animation: mascotTilt 3.2s ease-in-out infinite;
+  transform-origin: 50% 60%;
+
+}
+.mascot-gif:active{
+  animation: mascotBounce 0.4s ease;
+  transform: scale(3);
+}
+
+@keyframes mascotBounce{
+  0% { transform: scale(1); }
+  40% { transform: scale(0.85); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* bubble on hover */
+.mascot-bubble{
+  position: absolute;
+  right: 86px;
+  bottom: 10px;
+  width: 220px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(17,20,40,0.10);
+  border-radius: 18px;
+  padding: 12px 12px;
+  box-shadow: 0 18px 30px rgba(0,0,0,0.14);
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity .2s ease, transform .2s ease;
+  pointer-events: auto;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.mascot-bubble::after{
+  content:"";
+  position:absolute;
+  right: -8px;
+  bottom: 18px;
+  width: 14px;
+  height: 14px;
+  background: rgba(255,255,255,0.92);
+  border-right: 1px solid rgba(17,20,40,0.10);
+  border-bottom: 1px solid rgba(17,20,40,0.10);
+  transform: rotate(-45deg);
+  border-radius: 3px;
+}
+
+/* show bubble if hovering mascot OR bubble itself */
+.mascot:hover .mascot-bubble,
+.mascot:focus-within .mascot-bubble{
+  opacity: 1;
+  transform: translateX(0);
+}
+.mascot-link{
+  display:inline-block;
+  margin-top: 8px;
+  font-weight: 800;
+  color: #111428;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(243,139,179,0.22);
+  border: 1px solid rgba(243,139,179,0.35);
+}
+
+.mascot-link:hover{
+  background: rgba(243,139,179,0.30);
+}
+
+/* Animations */
+@keyframes mascotFloat{
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes mascotTilt{
+  0%,100% { transform: rotate(0deg); }
+  50% { transform: rotate(-6deg); }
+}
+
+/* Mobile placement tweak */
+@media (max-width: 520px){
+  .mascot{
+    right: 12px;
+    bottom: 12px;
+  }
+  .mascot-bubble{
+    right: 78px;
+    width: 200px;
+  }
+}
+
+.mascot.is-open .mascot-bubble{
+  opacity: 1;
+  transform: translateX(0);
+}
