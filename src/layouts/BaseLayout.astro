@@ -1,0 +1,23 @@
+---
+const { title = "Biskuit — Cozy Cookies" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Biskuit — cozy cookies with weekly drops, pastel vibes, and big flavors. Order pickup or delivery in Chișinău." />
+    <meta name="theme-color" content="#f38bb3" />
+    <title>{title}</title>
+
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

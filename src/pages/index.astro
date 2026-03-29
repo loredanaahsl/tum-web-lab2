@@ -1,0 +1,491 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/reset.css";
+import "../styles/style.css";
+import site from "../data/site";
+import cookies from "../data/cookies";
+
+const weeklyCookies = cookies.weekly;
+const classicCookies = cookies.classic;
+---
+<BaseLayout title={site.meta.title}>
+  <!-- HEADER / NAV -->
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Biskuit home">
+        <img src="/images/logo.png" alt="" class="logo-img" />
+        <span class="logo-text">biskuit</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#weekly">Weekly Drop</a>
+        <a href="#classic">Always Available</a>
+        <a href="#packages">Packages</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary" href="#packages">Order Now</a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="mobile-only-note">
+  {site.mobile.note}
+</div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+         <span class="pill">{site.hero.pill}</span>
+<h1>{site.hero.title}</h1>
+<p class="lead">{site.hero.lead}</p>
+
+         <div class="hero-cta">
+  <a class="btn btn-primary" href={site.hero.primaryCtaHref}>{site.hero.primaryCtaLabel}</a>
+  <a class="btn btn-outline" href={site.hero.secondaryCtaHref}>{site.hero.secondaryCtaLabel}</a>
+</div>
+
+<div class="hero-stats" role="list">
+  {site.stats.map((stat) => (
+    <div class="stat" role="listitem">
+      <div class="stat-num">{stat.number}</div>
+      <div class="stat-label">{stat.label}</div>
+    </div>
+  ))}
+</div>
+
+        <aside class="hero-feature" aria-label="Featured cookie">
+          <div class="feature-card weekly-preview" aria-label="This week preview">
+            <div class="weekly-media" aria-hidden="true">
+              <img class="weekly-img" src="" alt="" />
+            </div>
+            <div class="weekly-preview-head">
+              <span class="badge weekly-badge">{site.featured.badge}</span>
+
+              <div class="weekly-nav" aria-label="Preview navigation">
+                <button class="weekly-btn weekly-prev" type="button" aria-label="Previous cookie">‹</button>
+                <button class="weekly-btn weekly-next" type="button" aria-label="Next cookie">›</button>
+              </div>
+            </div>
+
+            <h2 class="feature-title weekly-title">Loading...</h2>
+            <p class="feature-desc weekly-desc"></p>
+
+            <div class="weekly-dots" aria-label="Choose cookie"></div>
+
+            <div class="feature-actions">
+              <button class="btn btn-soft js-open-feature" type="button">Learn More</button>
+              <a class="btn btn-primary js-order-feature" href="#weekly">Order Now</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="weekly">
+      <div class="container">
+      <div class="section-head">
+  <h2>Weekly Drop</h2>
+  <p class="muted">Five new or returning flavors drop every Monday. Try them before they&apos;re gone!</p>
+</div>
+<div class="classic-grid">
+  {classicCookies.map((cookie) => (
+    <article
+      class="classic-card js-cookie"
+      tabindex="0"
+      role="button"
+      aria-label={`Open ${cookie.name}`}
+      data-name={cookie.name}
+      data-tag={cookie.tag}
+      data-desc={cookie.desc}
+      data-price={cookie.price}
+      data-theme={cookie.theme}
+      data-img={cookie.img}
+    >
+      <div class="classic-media">
+        <img src={cookie.img} alt={cookie.alt} />
+      </div>
+      <div class="classic-body">
+        <h3>{cookie.shortTitle}</h3>
+        <p class="muted">{cookie.shortDesc}</p>
+      </div>
+    </article>
+  ))}
+</div>
+     
+      </div>
+    </section>
+
+    <section class="section alt" id="packages">
+      <div class="container">
+       <div class="section-head">
+  <h2>{site.packages.title}</h2>
+  <p class="muted">{site.packages.description}</p>
+</div>
+
+<div class="pricing-grid">
+  {site.packages.items.map((item) => (
+    <div class={`pricing-card ${item.featured ? "featured" : ""}`}>
+      {item.featured && <span class="badge">{item.badge}</span>}
+      <h3>{item.name}</h3>
+      <p class="price">{item.price}</p>
+      <p class="muted">{item.description}</p>
+      <a class="btn btn-primary" href="#contact">Order</a>
+    </div>
+  ))}
+</div>
+          
+      </div>
+    </section>
+
+    <section class="section" id="about">
+  <div class="container about-grid">
+    <div>
+      <h2>{site.about.title}</h2>
+      <p class="muted">{site.about.description}</p>
+      <div class="about-cards">
+        {site.about.cards.map((card) => (
+          <div class="mini-card">
+            <h3>{card.title}</h3>
+            <p class="muted">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="about-panel">
+      <h3>{site.about.panelTitle}</h3>
+      <ol class="steps">
+        {site.about.steps.map((step) => (
+          <li><span class="step-dot"></span>{step}</li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
+
+    <section class="section alt" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <h2>{site.contact.title}</h2>
+      <p class="muted">{site.contact.description}</p>
+
+      <div class="contact-lines">
+        <p><strong>Email:</strong> <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></p>
+        <p><strong>Phone:</strong> <a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a></p>
+        <p><strong>City:</strong> {site.contact.city}</p>
+      </div>
+    </div>
+
+    <form
+      class="contact-form"
+      action="#"
+      onsubmit="alert('Demo: form not submitted.'); return false;"
+    >
+      <label>
+        Your name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+
+      <button class="btn btn-primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> {site.footer.text}</p>
+      <nav class="footer-nav">
+        <a href="#top" class="back-to-top">{site.footer.backToTop}</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="cookieModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Close" data-close="true">✕</button>
+
+      <div class="modal-inner">
+        <div class="modal-media">
+          <img id="modalImg" src="" alt="" />
+        </div>
+
+        <div class="modal-content">
+          <span class="badge" id="modalTag">This Week Only</span>
+          <h3 id="modalTitle">Cookie title</h3>
+          <p class="muted" id="modalDesc">Cookie description</p>
+
+          <div class="modal-row">
+            <div class="price-chip" id="modalPrice">—</div>
+            <button class="btn btn-primary" type="button" onclick="alert('Demo: order not submitted.')">
+              Order Now
+            </button>
+          </div>
+
+          <p class="tiny muted">
+            Tip: click outside or press <kbd>Esc</kbd> to close.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mascot" id="mascot" aria-label="Biskuit mascot" role="complementary">
+    <button class="mascot-btn" type="button" aria-label="Biskuit helper">
+      <img class="mascot-gif" src="/images/mascot.gif" alt="Biskuit mascot" />
+    </button>
+
+    <div class="mascot-bubble" role="tooltip">
+      <strong>{site.mascot.title}</strong><br />
+{site.mascot.text} <br />
+<a class="mascot-link" href={site.mascot.ctaHref}>{site.mascot.ctaLabel}</a>
+    </div>
+  </div>
+
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a class="mobile-cta-btn primary" href="#weekly">Weekly Drop</a>
+    <a class="mobile-cta-btn" href="#packages">Order</a>
+  </div>
+
+  <script is:inline>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".site-nav");
+    toggle?.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    const modal = document.getElementById("cookieModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalTag = document.getElementById("modalTag");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalImg = document.getElementById("modalImg");
+    const modalPrice = document.getElementById("modalPrice");
+
+    const openModal = (data) => {
+      document.body.classList.add("no-scroll", "modal-open");
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+
+      modal.dataset.theme = data.theme || "default";
+      modalTitle.textContent = data.name || "Cookie";
+      modalTag.textContent = data.tag || "This Week Only";
+      modalDesc.textContent = data.desc || "";
+      modalPrice.textContent = data.price ? `from ${data.price}` : "—";
+
+      modalImg.src = data.img || "";
+      modalImg.alt = data.name || "Cookie image";
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll", "modal-open");
+    };
+
+    document.querySelectorAll(".js-cookie").forEach((card) => {
+      const handler = () => {
+        openModal({
+          name: card.dataset.name,
+          tag: card.dataset.tag,
+          desc: card.dataset.desc,
+          price: card.dataset.price,
+          theme: card.dataset.theme,
+          img: card.dataset.img,
+        });
+      };
+
+      card.addEventListener("click", handler);
+      card.querySelectorAll("button").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          handler();
+        })
+      );
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handler();
+        }
+      });
+    });
+
+    document.querySelector(".js-open-feature")?.addEventListener("click", () => {
+      openModal({
+        name: "Strawberry Cheesecake Cookie",
+        tag: "This Week Only",
+        desc: "A vanilla cookie layered with strawberry compote, creamy cheesecake filling, and white chocolate pieces.",
+        price: "85 MDL",
+        theme: "strawberry",
+        img: "/images/strawberry-cheesecake.png",
+      });
+    });
+
+    modal?.addEventListener("click", (e) => {
+      if (e.target?.dataset?.close === "true") closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+  </script>
+
+  <script is:inline>
+    (function(){
+      const weeklySection = document.querySelector('#weekly');
+      const cookies = weeklySection ? Array.from(weeklySection.querySelectorAll('.js-cookie')) : [];
+      if (!cookies.length) return;
+
+      const card = document.querySelector('.weekly-preview');
+      if (!card) return;
+
+      const badgeEl = card.querySelector('.weekly-badge');
+      const titleEl = card.querySelector('.weekly-title');
+      const descEl  = card.querySelector('.weekly-desc');
+      const dotsEl  = card.querySelector('.weekly-dots');
+
+      const btnPrev = card.querySelector('.weekly-prev');
+      const btnNext = card.querySelector('.weekly-next');
+      const btnLearn = card.querySelector('.js-open-feature');
+
+      const slides = cookies.map((el) => ({
+        el,
+        theme: el.dataset.theme || 'pink',
+        tag: el.dataset.tag || 'This Week Only',
+        name: el.dataset.name || el.querySelector('h3')?.textContent?.trim() || 'Cookie',
+        desc: el.dataset.desc || el.querySelector('p')?.textContent?.trim() || '',
+        img: el.dataset.img || ''
+      }));
+
+      dotsEl.innerHTML = '';
+      const dots = slides.map((_, i) => {
+        const d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'weekly-dot';
+        d.setAttribute('aria-label', `Show cookie ${i+1}`);
+        d.addEventListener('click', () => setIndex(i, true));
+        dotsEl.appendChild(d);
+        return d;
+      });
+
+      let idx = 0;
+      let timer = null;
+
+      function render(){
+        const s = slides[idx];
+        if (badgeEl) badgeEl.textContent = s.tag;
+        if (titleEl) titleEl.textContent = s.name;
+        if (descEl) descEl.textContent = s.desc || "";
+
+        const imgEl = card.querySelector('.weekly-img');
+        if (imgEl){
+          imgEl.src = s.img;
+          imgEl.alt = s.name;
+        }
+
+        card.setAttribute('data-theme', s.theme);
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+      }
+
+      function setIndex(next, userAction){
+        idx = (next + slides.length) % slides.length;
+        render();
+        if (userAction) restartAuto();
+      }
+
+      function next(){ setIndex(idx + 1, true); }
+      function prev(){ setIndex(idx - 1, true); }
+
+      btnNext?.addEventListener('click', next);
+      btnPrev?.addEventListener('click', prev);
+
+      btnLearn?.addEventListener('click', () => {
+        slides[idx].el.click();
+      });
+
+      function startAuto(){
+        if (timer) return;
+        timer = setInterval(() => {
+          setIndex(idx + 1, false);
+        }, 6000);
+      }
+
+      function stopAuto(){
+        if (timer){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function restartAuto(){
+        stopAuto();
+        startAuto();
+      }
+
+      card.addEventListener('mouseenter', stopAuto);
+      card.addEventListener('mouseleave', startAuto);
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
+      });
+
+      render();
+      startAuto();
+    })();
+  </script>
+
+  <script is:inline>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('mascot')?.classList.add('is-visible');
+      }, 1400);
+    });
+  </script>
+
+  <script is:inline>
+    const mascot = document.getElementById('mascot');
+    const btn = mascot?.querySelector('.mascot-btn');
+
+    btn?.addEventListener('click', () => {
+      mascot.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mascot) return;
+      if (!mascot.contains(e.target)) mascot.classList.remove('is-open');
+    });
+  </script>
+
+  <script is:inline>
+    const mascotGif = document.querySelector('.mascot-gif');
+    if (mascotGif) {
+      mascotGif.addEventListener('click', () => {
+        const src = mascotGif.src;
+        mascotGif.src = "";
+        mascotGif.offsetHeight;
+        mascotGif.src = src;
+      });
+    }
+  </script>
+</BaseLayout>
