@@ -57,8 +57,9 @@ const classicCookies = cookies.classic;
     </div>
   ))}
 </div>
+</div>
 
-        <aside class="hero-feature" aria-label="Featured cookie">
+<aside class="hero-feature" aria-label="Featured cookie">
           <div class="feature-card weekly-preview" aria-label="This week preview">
             <div class="weekly-media" aria-hidden="true">
               <img class="weekly-img" src="" alt="" />
@@ -92,10 +93,11 @@ const classicCookies = cookies.classic;
   <h2>Weekly Drop</h2>
   <p class="muted">Five new or returning flavors drop every Monday. Try them before they&apos;re gone!</p>
 </div>
-<div class="classic-grid">
-  {classicCookies.map((cookie) => (
+<div class="cookie-showcase">
+  {weeklyCookies.map((cookie) => (
     <article
-      class="classic-card js-cookie"
+      class="cookie-item js-cookie"
+      data-theme={cookie.theme}
       tabindex="0"
       role="button"
       aria-label={`Open ${cookie.name}`}
@@ -103,23 +105,59 @@ const classicCookies = cookies.classic;
       data-tag={cookie.tag}
       data-desc={cookie.desc}
       data-price={cookie.price}
-      data-theme={cookie.theme}
       data-img={cookie.img}
     >
-      <div class="classic-media">
+      <div class="cookie-media">
         <img src={cookie.img} alt={cookie.alt} />
       </div>
-      <div class="classic-body">
+      <div class="cookie-content">
+        <span class="cookie-tag">{cookie.tag}</span>
         <h3>{cookie.shortTitle}</h3>
-        <p class="muted">{cookie.shortDesc}</p>
+        <p>{cookie.shortDesc}</p>
+        <div class="cookie-actions">
+          <button class="btn btn-learn" type="button">Learn More</button>
+          <button class="btn btn-dark" type="button">Order Now</button>
+        </div>
       </div>
     </article>
   ))}
 </div>
-     
       </div>
     </section>
+<section class="section" id="classic">
+  <div class="container">
+    <div class="section-head">
+      <span class="pill pill-soft">{site.classicSection.pill}</span>
+      <h2>{site.classicSection.title}</h2>
+      <p class="muted">{site.classicSection.description}</p>
+    </div>
 
+    <div class="classic-grid">
+      {classicCookies.map((cookie) => (
+        <article
+          class="classic-card js-cookie"
+          tabindex="0"
+          role="button"
+          aria-label={`Open ${cookie.name}`}
+          data-name={cookie.name}
+          data-tag={cookie.tag}
+          data-desc={cookie.desc}
+          data-price={cookie.price}
+          data-theme={cookie.theme}
+          data-img={cookie.img}
+        >
+          <div class="classic-media">
+            <img src={cookie.img} alt={cookie.alt} />
+          </div>
+          <div class="classic-body">
+            <h3>{cookie.shortTitle}</h3>
+            <p class="muted">{cookie.shortDesc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
     <section class="section alt" id="packages">
       <div class="container">
        <div class="section-head">
