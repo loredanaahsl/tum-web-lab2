@@ -7,17 +7,6 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-
-  - name: "site"
-    label: "Site Content"
-    files:
-      - file: "src/data/site.ts"
-        label: "Main Content"
-        name: "site"
-        fields:
-          - { label: "Hero Title", name: "hero_title", widget: "string" }
-          - { label: "Hero Description", name: "hero_desc", widget: "text" }
-
   - name: "cookies"
     label: "Cookies"
     files:
