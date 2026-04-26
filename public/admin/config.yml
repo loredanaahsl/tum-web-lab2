@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: loredanaahsl/tum-web-lab2
+  name: git-gateway
   branch: lab4-astro-cms
 
 media_folder: "public/images"
