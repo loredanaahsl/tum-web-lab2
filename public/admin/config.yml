@@ -1,17 +1,105 @@
 backend:
   name: git-gateway
   branch: lab4-astro-cms
-  
+
 media_folder: "public/images"
 public_folder: "/images"
 
 collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - file: "src/data/site.ts"
+        label: "Main Site Text"
+        name: "site"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Pill", name: "pill", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Lead", name: "lead", widget: "text" }
+              - { label: "Primary CTA Label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Primary CTA Link", name: "primaryCtaHref", widget: "string" }
+              - { label: "Secondary CTA Label", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Secondary CTA Link", name: "secondaryCtaHref", widget: "string" }
+
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Classic Section"
+            name: "classicSection"
+            widget: "object"
+            fields:
+              - { label: "Pill", name: "pill", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Packages"
+            name: "packages"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Featured", name: "featured", widget: "boolean", required: false }
+                  - { label: "Badge", name: "badge", widget: "string", required: false }
+
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - { label: "Panel Title", name: "panelTitle", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                field: { label: "Step", name: "step", widget: "string" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Phone Link", name: "phoneHref", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+
+          - label: "Mascot"
+            name: "mascot"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA Link", name: "ctaHref", widget: "string" }
+
   - name: "cookies"
     label: "Cookies"
     files:
       - file: "src/data/cookies.ts"
-        label: "Weekly Cookies"
-        name: "weekly"
+        label: "Cookie Menu"
+        name: "cookieMenu"
         fields:
           - label: "Weekly Cookies"
             name: "weekly"
@@ -19,6 +107,24 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Short Title", name: "shortTitle", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
               - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Short Description", name: "shortDesc", widget: "text" }
               - { label: "Price", name: "price", widget: "string" }
-              - { label: "Image", name: "img", widget: "string" }
+              - { label: "Theme", name: "theme", widget: "string" }
+              - { label: "Image", name: "img", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+
+          - label: "Classic Cookies"
+            name: "classic"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Short Title", name: "shortTitle", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Short Description", name: "shortDesc", widget: "text" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Theme", name: "theme", widget: "string" }
+              - { label: "Image", name: "img", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
