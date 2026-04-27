@@ -9,8 +9,8 @@ collections:
   - name: "site"
     label: "Site Content"
     files:
-      - file: "src/data/site.ts"
-        label: "Main Site Text"
+      - file: "src/data/site.json"
+        label: "Main Site Content"
         name: "site"
         fields:
           - label: "Hero"
@@ -31,14 +31,6 @@ collections:
             fields:
               - { label: "Number", name: "number", widget: "string" }
               - { label: "Label", name: "label", widget: "string" }
-
-          - label: "Classic Section"
-            name: "classicSection"
-            widget: "object"
-            fields:
-              - { label: "Pill", name: "pill", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
 
           - label: "Packages"
             name: "packages"
@@ -62,17 +54,6 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-              - label: "Cards"
-                name: "cards"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
-              - { label: "Panel Title", name: "panelTitle", widget: "string" }
-              - label: "Steps"
-                name: "steps"
-                widget: "list"
-                field: { label: "Step", name: "step", widget: "string" }
 
           - label: "Contact"
             name: "contact"
@@ -97,7 +78,7 @@ collections:
   - name: "cookies"
     label: "Cookies"
     files:
-      - file: "src/data/cookies.ts"
+      - file: "src/data/cookies.json"
         label: "Cookie Menu"
         name: "cookieMenu"
         fields:
