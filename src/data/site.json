@@ -1,47 +1,71 @@
 {
+  "contact": {
+    "title": "Contact & Order",
+    "description": "Want a custom box or event order? Send a message and we’ll reply fast.",
+    "email": "loredana.condrea12@gmail.com",
+    "phone": "+373 60 250970",
+    "phoneHref": "+37360250970",
+    "city": "Chișinău, Moldova"
+  },
+  "mobile": {
+    "note": "Tip: Tap a cookie to see details 🍪",
+    "weeklyLabel": "Weekly Drop",
+    "orderLabel": "Order"
+  },
   "meta": {
     "title": "Biskuit — Cozy Cookies",
     "description": "Biskuit — cozy cookies with weekly drops, pastel vibes, and big flavors. Order pickup or delivery in Chișinău."
   },
-  "hero": {
-    "pill": "Fresh this week • limited batches",
-    "title": "Cozy cookies, big flavors.",
-    "lead": "Inspired by weekly drops — pastel, soft, and dangerously delicious. Order for pickup or delivery in Chișinău.",
-    "primaryCtaLabel": "See Weekly Drop",
-    "primaryCtaHref": "#weekly",
-    "secondaryCtaLabel": "Explore Menu",
-    "secondaryCtaHref": "#weekly"
-  },
-  "stats": [
-    { "number": "5", "label": "weekly flavors" },
-    { "number": "24h", "label": "freshness window" },
-    { "number": "★ 4.9", "label": "happy customers" }
-  ],
-  "featured": {
-    "badge": "This Week Only"
-  },
-  "classicSection": {
-    "pill": "Always Available",
-    "title": "Classic Flavors",
-    "description": "Clasicele care sunt aici mereu — perfecte pentru safe choice."
+  "mascot": {
+    "title": "Hey! I'm Bisc!🍪",
+    "text": "Wanna see this week's drop?",
+    "ctaLabel": "Go to Weekly",
+    "ctaHref": "#weekly"
   },
   "packages": {
     "title": "Pick Your Package",
     "description": "Mix & match your weekly favorites",
     "items": [
-      { "name": "Single", "price": "79 MDL", "description": "Pick one cookie" },
-      { "name": "Half Dozen", "price": "420 MDL", "description": "6 cookies (mix & match)", "featured": true, "badge": "Most Popular" },
-      { "name": "Dozen", "price": "780 MDL", "description": "12 cookies (mix & match)" },
-      { "name": "Party Box", "price": "1450 MDL", "description": "24 cookies for events" }
+      {
+        "name": "Single",
+        "price": "79 MDL",
+        "description": "Pick one cookie"
+      },
+      {
+        "name": "Half Dozen",
+        "price": "420 MDL",
+        "description": "6 cookies (mix & match)",
+        "featured": true,
+        "badge": "Most Popular"
+      },
+      {
+        "name": "Dozen",
+        "price": "780 MDL",
+        "description": "12 cookies (mix & match)"
+      },
+      {
+        "name": "Party Box",
+        "price": "1450 MDL",
+        "description": "24 cookies for events"
+      }
     ]
   },
   "about": {
     "title": "About Biskuit",
     "description": "Small-batch cookies baked for maximum cozy. We do weekly drops, pastel vibes, and flavors that feel like a hug.",
     "cards": [
-      { "title": "Small batches", "description": "Freshness first — baked in limited runs." },
-      { "title": "Weekly rotation", "description": "New lineup every week, classics return often." },
-      { "title": "Pickup & delivery", "description": "Order online. Quick pickup or delivery in the city." }
+      {
+        "title": "Small batches",
+        "description": "Freshness first — baked in limited runs."
+      },
+      {
+        "title": "Weekly rotation",
+        "description": "New lineup every week, classics return often."
+      },
+      {
+        "title": "Pickup & delivery",
+        "description": "Order online. Quick pickup or delivery in the city."
+      }
     ],
     "panelTitle": "How ordering works",
     "steps": [
@@ -51,27 +75,39 @@
       "Pickup or delivery"
     ]
   },
-  "contact": {
-    "title": "Contact & Order",
-    "description": "Want a custom box or event order? Send a message and we’ll reply fast.",
-    "email": "loredana.condrea12@gmail.com",
-    "phone": "+373 60 250970",
-    "phoneHref": "+37360250970",
-    "city": "Chișinău, Moldova"
+  "featured": {
+    "badge": "This Week Only"
+  },
+  "classicSection": {
+    "pill": "Always Available",
+    "title": "Classic Flavors",
+    "description": "Clasicele care sunt aici mereu — perfecte pentru safe choice."
+  },
+  "hero": {
+    "pill": "Fresh this week • limited batches",
+    "title": "Cozy cookies, big flavors for anyone.",
+    "lead": "Inspired by weekly drops — pastel, soft, and dangerously delicious. Order for pickup or delivery in Chișinău.",
+    "primaryCtaLabel": "See Weekly Drop",
+    "primaryCtaHref": "#weekly",
+    "secondaryCtaLabel": "Explore Menu",
+    "secondaryCtaHref": "#weekly"
   },
   "footer": {
     "text": "Biskuit — Made cozy.",
     "backToTop": "Back to top"
   },
-  "mascot": {
-    "title": "Hey! I'm Bisc!🍪",
-    "text": "Wanna see this week's drop?",
-    "ctaLabel": "Go to Weekly",
-    "ctaHref": "#weekly"
-  },
-  "mobile": {
-    "note": "Tip: Tap a cookie to see details 🍪",
-    "weeklyLabel": "Weekly Drop",
-    "orderLabel": "Order"
-  }
+  "stats": [
+    {
+      "number": "5",
+      "label": "weekly flavors"
+    },
+    {
+      "number": "24h",
+      "label": "freshness window"
+    },
+    {
+      "number": "★ 4.9",
+      "label": "happy customers"
+    }
+  ]
 }
