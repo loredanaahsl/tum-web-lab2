@@ -1,138 +1,138 @@
 {
   "weekly": [
     {
-      "name": "Campfire S’mores Cookie",
-      "shortTitle": "Campfire S’mores",
-      "tag": "This Week Only",
-      "desc": "A golden graham-style cookie topped with melted milk chocolate, toasted marshmallow, and crunchy chocolate chunks.",
-      "shortDesc": "Golden graham cookie, milk chocolate melt, toasted marshmallow, and crunchy chunks.",
-      "price": "79 MDL",
-      "theme": "smores",
       "img": "/images/campfire-smores.png",
-      "alt": "Campfire S’mores Cookie"
+      "price": "67 MDL",
+      "alt": "Campfire S’mores Cookie",
+      "theme": "smores",
+      "name": "Campfire S’mores Cookie",
+      "shortDesc": "Golden graham cookie, milk chocolate melt, toasted marshmallow, and crunchy chunks.",
+      "desc": "A golden graham-style cookie topped with melted milk chocolate, toasted marshmallow, and crunchy chocolate chunks.",
+      "tag": "This Week Only",
+      "shortTitle": "Campfire S’mores"
     },
     {
-      "name": "Celebration Cake Cookie",
-      "shortTitle": "Celebration Cake",
-      "tag": "This Week Only",
-      "desc": "A soft cake-batter cookie topped with vanilla frosting and loaded with colorful candy sprinkles.",
-      "shortDesc": "Soft cake-batter cookie, vanilla frosting, and candy sprinkles.",
-      "price": "75 MDL",
-      "theme": "cake",
       "img": "/images/celebration-cake.png",
-      "alt": "Celebration Cake Cookie"
+      "price": "75 MDL",
+      "alt": "Celebration Cake Cookie",
+      "theme": "cake",
+      "name": "Celebration Cake Cookie",
+      "shortDesc": "Soft cake-batter cookie, vanilla frosting, and candy sprinkles.",
+      "desc": "A soft cake-batter cookie topped with vanilla frosting and loaded with colorful candy sprinkles.",
+      "tag": "This Week Only",
+      "shortTitle": "Celebration Cake"
     },
     {
-      "name": "Peanut Butter Cup Cookie",
-      "shortTitle": "Peanut Butter Cup",
-      "tag": "Limited",
-      "desc": "A rich peanut butter cookie filled with a classic peanut butter cup and finished with a smooth peanut butter drizzle.",
-      "shortDesc": "Rich PB base, filled PB cup, finished with silky PB drizzle.",
-      "price": "82 MDL",
-      "theme": "pb",
       "img": "/images/peanut-butter-cup.png",
-      "alt": "Peanut Butter Cup Cookie"
-    },
-    {
-      "name": "Caramel Crunch Cookie",
-      "shortTitle": "Caramel Crunch",
-      "tag": "This Week Only",
-      "desc": "A buttery cookie topped with warm caramel sauce and chunks of milk chocolate for the perfect sweet bite.",
-      "shortDesc": "Buttery base, warm caramel, and milk chocolate chunks.",
-      "price": "78 MDL",
-      "theme": "caramel",
-      "img": "/images/caramel-crunch.png",
-      "alt": "Caramel Crunch Cookie"
-    },
-    {
-      "name": "Strawberry Cheesecake Cookie",
-      "shortTitle": "Strawberry Cheesecake",
-      "tag": "Featured",
-      "desc": "A vanilla cookie layered with strawberry compote, creamy cheesecake filling, and white chocolate pieces.",
-      "shortDesc": "Vanilla base, strawberry compote, cheesecake cream, white chocolate.",
-      "price": "85 MDL",
-      "theme": "lemon",
-      "img": "/images/strawberry-cheesecake.png",
-      "alt": "Strawberry Cheesecake Cookie"
-    },
-    {
-      "name": "Triple Chocolate Fudge Cookie",
-      "shortTitle": "Triple Chocolate Fudge",
-      "tag": "This Week Only",
-      "desc": "A deep cocoa cookie packed with dark, milk, and semi-sweet chocolate chunks, finished with melted chocolate on top.",
-      "shortDesc": "Deep cocoa cookie with 3 chocolates + melted top layer.",
-      "price": "84 MDL",
-      "theme": "choco",
-      "img": "/images/triple-chocolate-fudge.png",
-      "alt": "Triple Chocolate Fudge Cookie"
-    },
-    {
-      "name": "Salted Caramel Cheesecake Cookie",
-      "shortTitle": "Salted Caramel Cheesecake",
+      "price": "82 MDL",
+      "alt": "Peanut Butter Cup Cookie",
+      "theme": "pb",
+      "name": "Peanut Butter Cup Cookie",
+      "shortDesc": "Rich PB base, filled PB cup, finished with silky PB drizzle.",
+      "desc": "A rich peanut butter cookie filled with a classic peanut butter cup and finished with a smooth peanut butter drizzle.",
       "tag": "Limited",
-      "desc": "A soft cookie topped with vanilla cheesecake cream, salted caramel drizzle, and chocolate crunch pieces.",
-      "shortDesc": "Cheesecake cream, salted caramel drizzle, chocolate crunch.",
-      "price": "88 MDL",
-      "theme": "caramel",
-      "img": "/images/salted-caramel-cheesecake.png",
-      "alt": "Salted Caramel Cheesecake Cookie"
+      "shortTitle": "Peanut Butter Cup"
     },
     {
-      "name": "Red Velvet Oreo Cookie",
-      "shortTitle": "Red Velvet Oreo",
+      "img": "/images/caramel-crunch.png",
+      "price": "78 MDL",
+      "alt": "Caramel Crunch Cookie",
+      "theme": "caramel",
+      "name": "Caramel Crunch Cookie",
+      "shortDesc": "Buttery base, warm caramel, and milk chocolate chunks.",
+      "desc": "A buttery cookie topped with warm caramel sauce and chunks of milk chocolate for the perfect sweet bite.",
       "tag": "This Week Only",
-      "desc": "A red velvet cookie topped with smooth cream cheese frosting and crushed Oreo cookies for a rich, cookies-and-cream finish.",
-      "shortDesc": "Cream cheese frosting + crushed Oreo for that cookies-and-cream finish.",
-      "price": "86 MDL",
-      "theme": "pink",
+      "shortTitle": "Caramel Crunch"
+    },
+    {
+      "img": "/images/strawberry-cheesecake.png",
+      "price": "85 MDL",
+      "alt": "Strawberry Cheesecake Cookie",
+      "theme": "lemon",
+      "name": "Strawberry Cheesecake Cookie",
+      "shortDesc": "Vanilla base, strawberry compote, cheesecake cream, white chocolate.",
+      "desc": "A vanilla cookie layered with strawberry compote, creamy cheesecake filling, and white chocolate pieces.",
+      "tag": "Featured",
+      "shortTitle": "Strawberry Cheesecake"
+    },
+    {
+      "img": "/images/triple-chocolate-fudge.png",
+      "price": "84 MDL",
+      "alt": "Triple Chocolate Fudge Cookie",
+      "theme": "choco",
+      "name": "Triple Chocolate Fudge Cookie",
+      "shortDesc": "Deep cocoa cookie with 3 chocolates + melted top layer.",
+      "desc": "A deep cocoa cookie packed with dark, milk, and semi-sweet chocolate chunks, finished with melted chocolate on top.",
+      "tag": "This Week Only",
+      "shortTitle": "Triple Chocolate Fudge"
+    },
+    {
+      "img": "/images/salted-caramel-cheesecake.png",
+      "price": "88 MDL",
+      "alt": "Salted Caramel Cheesecake Cookie",
+      "theme": "caramel",
+      "name": "Salted Caramel Cheesecake Cookie",
+      "shortDesc": "Cheesecake cream, salted caramel drizzle, chocolate crunch.",
+      "desc": "A soft cookie topped with vanilla cheesecake cream, salted caramel drizzle, and chocolate crunch pieces.",
+      "tag": "Limited",
+      "shortTitle": "Salted Caramel Cheesecake"
+    },
+    {
       "img": "/images/red-velvet-oreo.png",
-      "alt": "Red Velvet Oreo Cookie"
+      "price": "86 MDL",
+      "alt": "Red Velvet Oreo Cookie",
+      "theme": "pink",
+      "name": "Red Velvet Oreo Cookie",
+      "shortDesc": "Cream cheese frosting + crushed Oreo for that cookies-and-cream finish.",
+      "desc": "A red velvet cookie topped with smooth cream cheese frosting and crushed Oreo cookies for a rich, cookies-and-cream finish.",
+      "tag": "This Week Only",
+      "shortTitle": "Red Velvet Oreo"
     }
   ],
   "classic": [
     {
-      "name": "Semi-Sweet Chocolate Chunk Cookie",
-      "shortTitle": "Semi-Sweet Chocolate Chunk",
-      "tag": "Always Available",
-      "desc": "Soft vanilla cookie loaded with semi-sweet chunks — the classic that never misses.",
-      "shortDesc": "Vanilla base + big chocolate chunks.",
-      "price": "72 MDL",
-      "theme": "choco",
       "img": "/images/classic-chocolate-chunk.png",
-      "alt": "Semi-Sweet Chocolate Chunk Cookie"
-    },
-    {
-      "name": "Classic Sugar Cookie",
-      "shortTitle": "Classic Sugar",
-      "tag": "Always Available",
-      "desc": "Buttery sugar cookie with a light vanilla glaze — simple, cute, addictive.",
-      "shortDesc": "Buttery, soft, vanilla glaze.",
-      "price": "68 MDL",
-      "theme": "cake",
-      "img": "/images/classic-sugar.png",
-      "alt": "Classic Sugar Cookie"
-    },
-    {
-      "name": "Double Chocolate Cookie",
-      "shortTitle": "Double Chocolate",
-      "tag": "Always Available",
-      "desc": "Cocoa cookie with extra chocolate chunks — for the real chocoholics.",
-      "shortDesc": "Cocoa base + extra chunks.",
-      "price": "74 MDL",
+      "price": "72 MDL",
+      "alt": "Semi-Sweet Chocolate Chunk Cookie",
       "theme": "choco",
-      "img": "/images/classic-double-choco.png",
-      "alt": "Double Chocolate Cookie"
+      "name": "Semi-Sweet Chocolate Chunk Cookie",
+      "shortDesc": "Vanilla base + big chocolate chunks.",
+      "desc": "Soft vanilla cookie loaded with semi-sweet chunks — the classic that never misses.",
+      "tag": "Always Available",
+      "shortTitle": "Semi-Sweet Chocolate Chunk"
     },
     {
-      "name": "Peanut Butter Classic Cookie",
-      "shortTitle": "Peanut Butter Classic",
+      "img": "/images/classic-sugar.png",
+      "price": "68 MDL",
+      "alt": "Classic Sugar Cookie",
+      "theme": "cake",
+      "name": "Classic Sugar Cookie",
+      "shortDesc": "Buttery, soft, vanilla glaze.",
+      "desc": "Buttery sugar cookie with a light vanilla glaze — simple, cute, addictive.",
       "tag": "Always Available",
-      "desc": "Soft peanut butter cookie with that iconic criss-cross top.",
-      "shortDesc": "Soft PB, criss-cross top.",
-      "price": "70 MDL",
-      "theme": "pb",
+      "shortTitle": "Classic Sugar"
+    },
+    {
+      "img": "/images/classic-double-choco.png",
+      "price": "74 MDL",
+      "alt": "Double Chocolate Cookie",
+      "theme": "choco",
+      "name": "Double Chocolate Cookie",
+      "shortDesc": "Cocoa base + extra chunks.",
+      "desc": "Cocoa cookie with extra chocolate chunks — for the real chocoholics.",
+      "tag": "Always Available",
+      "shortTitle": "Double Chocolate"
+    },
+    {
       "img": "/images/classic-peanut-butter.png",
-      "alt": "Peanut Butter Classic Cookie"
+      "price": "70 MDL",
+      "alt": "Peanut Butter Classic Cookie",
+      "theme": "pb",
+      "name": "Peanut Butter Classic Cookie",
+      "shortDesc": "Soft PB, criss-cross top.",
+      "desc": "Soft peanut butter cookie with that iconic criss-cross top.",
+      "tag": "Always Available",
+      "shortTitle": "Peanut Butter Classic"
     }
   ]
 }
