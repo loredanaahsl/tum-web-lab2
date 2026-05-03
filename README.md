@@ -1,43 +1,72 @@
-# Astro Starter Kit: Minimal
+# Biskuit — Lab 4: Static Site Generator & Git-based CMS
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## 1. Project Overview
+This project represents the migration of a static landing page into a modern architecture based on a Static Site Generator (SSG) and a Git-based Content Management System (CMS).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The goal was to improve maintainability, scalability, and allow non-technical users to edit content without modifying source code.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 2. Technologies Used
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Astro** — Static Site Generator (SSG)
+- **Netlify** — Hosting and deployment platform
+- **Decap CMS** — Git-based CMS
+- **GitHub** — Version control system
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 3. Key Features
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Fully responsive landing page
+- Modular structure using Astro components
+- Dynamic content loaded from JSON files
+- Content editable through a CMS interface
+- Automatic deployment after each content update
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 4. Content Management
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+All editable content is stored in:
 
-## 👀 Want to learn more?
+- `src/data/site.json` — general site content (hero, about, contact, etc.)
+- `src/data/cookies.json` — product data (weekly and classic cookies)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Using Decap CMS, content editors can:
+- modify text (titles, descriptions)
+- update prices
+- change images
+- add or remove items
+
+Each change creates a commit in the GitHub repository and triggers automatic redeployment.
+
+---
+
+## 5. Deployment
+
+The project is deployed using Netlify.
+
+- **Live website:**  
+  https://spontaneous-daifuku-905522.netlify.app/
+
+- **CMS panel:**  
+  https://spontaneous-daifuku-905522.netlify.app/admin/
+
+---
+
+## 6. How It Works
+
+1. The site is generated statically using Astro
+2. Content is stored in JSON files
+3. Decap CMS provides a UI for editing content
+4. Changes are committed to GitHub automatically
+5. Netlify detects changes and rebuilds the site
+
+---
+
+## 7. Running Locally
+
+```bash
+npm install
+npm run dev
